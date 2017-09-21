@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t rueedlinger/pyml .
+docker build -t rueedlinger/pyml-test .
