@@ -1,6 +1,6 @@
 # pyml - Docker Python Machine Learning Image
 _rueedlinger/pyml_ is Docker image to get started very quickly with the state of the art 
-Python machine learning and data visualization libraries. pyml is based on the _continuumio/anaconda3_ Docker 
+Python machine learning and data visualization libraries. This image is based on the _continuumio/anaconda3_ Docker 
 image.
 
 Installed Python libraries:
@@ -27,9 +27,6 @@ Next you shoudl see the folling output in the command line.
             http://localhost:8888/?token=e00b3199838bcc3f15a3227fd52752eec4992ad8111d1b57
 
 To connect to the Jupyter Notebook you have to copy/paste this URL into your browser.
-
-## Note
-_pyml_ is based on the __continuumio/anaconda3__ Docker image.
 
 ## Todo
 - add TensorFlow
