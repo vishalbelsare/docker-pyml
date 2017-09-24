@@ -1,11 +1,13 @@
-FROM continuumio/anaconda3
+FROM continuumio/anaconda3:4.4.0
 
 ENV PATH="/opt/conda/bin:${PATH}"
 
-RUN conda install jupyter matplotlib seaborn scikit-learn pandas numpy scipy statsmodels -y
+RUN conda config --add channels conda-forge
+
+RUN conda install jupyter matplotlib seaborn scikit-learn pandas numpy scipy statsmodels tensorflow keras nltk textblob -y
 
 VOLUME ["/notebooks"]
 EXPOSE 8888
 
-CMD jupyter notebook --notebook-dir=/notebooks --ip='*' --port=8888 --no-browser --allow-root
+ENTRYPOINT jupyter notebook --notebook-dir=/notebooks --ip='*' --port=8888 --no-browser --allow-root
 

@@ -1,9 +1,7 @@
 # pyml - Docker Python Machine Learning Image
-_rueedlinger/pyml_ is Docker image to get started very quickly with the state of the art 
+_rueedlinger/pyml_ is a Docker image to get started very quickly with state of the art 
 Python machine learning and data visualization libraries. This image is based on the _continuumio/anaconda3_ Docker 
-image.
-
-Installed Python libraries:
+and the the following Python libraries were installed:
 
 - jupyter 
 - matplotlib 
@@ -13,6 +11,13 @@ Installed Python libraries:
 - pandas 
 - numpy 
 - scipy 
+- keras
+- tensorflow
+- nltk
+- textblob
+
+To try out some machine learning algorithms have a look at the _Python Machine Learning Snippets_ (https://github.com/rueedlinger/machine-learning-snippets) - an ongoing project with collection of various machine learning examples as Jupyter Notebooks in 
+with scikit-learn, statsmodel, numpy and other libraries.
 
 ## Get started
 
@@ -37,7 +42,7 @@ This binds port 8888 of the container to port 9090 on your local machine.
     docker run -p 9090:8888 -it rueedlinger/pyml
 
 ### Change volume
-To store your work on the local machine you have to mount the volume '/notebooks'. 
+To store your work on the local machine you can mount the volume '/notebooks'. 
 With the -v flag you can specify where the volume is mounted on your local machine.
 
 This mounts the volume _/notebooks_ in the container to the local directory _/test_.
@@ -49,6 +54,3 @@ To update the local download you can use the _docker pull_ command.
 
     docker pull rueedlinger/pyml
 
-## Todo
-- add TensorFlow
-- add Keras
