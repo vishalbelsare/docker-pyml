@@ -1,7 +1,5 @@
 # pyml - Docker Python Machine Learning Image
-_rueedlinger/pyml_ is a Docker image to get started very quickly with state of the art 
-Python machine learning and data visualization libraries. This image is based on the _continuumio/anaconda3_ Docker 
-and the the following Python libraries were installed:
+rueedlinger/pyml is a Docker image to get started very quickly with state of the art Python machine learning and data visualization libraries. This image is based on the continuumio/anaconda3 Docker image. In addition the following Python libraries were installed:
 
 - jupyter 
 - matplotlib 
