@@ -44,7 +44,7 @@ This binds port 8888 of the container to port 9090 on your local machine.
 To store your work on the local machine you can mount the volume '/notebooks'. 
 With the -v flag you can specify where the volume is mounted on your local machine.
 
-This mounts the volume _/notebooks_ in the container to the local directory _/test_.
+This mounts the volume _/notebooks_ in the container to the local directory _/test/notebooks_.
 
     docker run -v /test/notebooks:/notebooks -p 8888:8888 -it rueedlinger/pyml-test
 
