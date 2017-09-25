@@ -46,7 +46,7 @@ With the -v flag you can specify where the volume is mounted on your local machi
 
 This mounts the volume _/notebooks_ in the container to the local directory _/test/notebooks_.
 
-    docker run -v /test/notebooks:/notebooks -p 8888:8888 -it rueedlinger/pyml-test
+    docker run -v /test/notebooks:/notebooks -p 8888:8888 -it rueedlinger/pyml
 
 ### How to use a specific image version
 To use the latest version of an image you can run the following command
