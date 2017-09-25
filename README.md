@@ -32,7 +32,7 @@ Next you shoud see the folling output in the command line.
 
 To connect to the Jupyter Notebook you have to copy/paste this URL into your browser.
 
-### Change port mapping
+### How to change the port mapping
 The Juypter Notebook is running on port _8888_. To change the port mapping to the 
 container you can us the _-p_. 
 
@@ -40,7 +40,7 @@ This binds port 8888 of the container to port 9090 on your local machine.
     
     docker run -p 9090:8888 -it rueedlinger/pyml
 
-### Change volume
+### How to change the volume
 To store your work on the local machine you can mount the volume '/notebooks'. 
 With the -v flag you can specify where the volume is mounted on your local machine.
 
@@ -48,8 +48,15 @@ This mounts the volume _/notebooks_ in the container to the local directory _/te
 
     docker run -v /test/notebooks:/notebooks -p 8888:8888 -it rueedlinger/pyml-test
 
-### Update the latest image
-To update the local image you can use the _docker pull_ command to download the _latest_ image.
+### How to use a specific image version
+To use the latest version of an image you can run the following command
 
-    docker pull rueedlinger/pyml
+    docker run -it rueedlinger/pyml
+    
+or use the _latest_ tag.
 
+     docker run -it rueedlinger/pyml:latest
+    
+You can also run a specific version of an image like _0.1_
+
+    docker run -it rueedlinger/pyml:0.1
