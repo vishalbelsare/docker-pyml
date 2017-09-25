@@ -4,7 +4,7 @@ ENV PATH="/opt/conda/bin:${PATH}"
 
 RUN conda config --add channels conda-forge
 
-RUN conda install jupyter matplotlib seaborn scikit-learn pandas numpy scipy statsmodels tensorflow keras nltk textblob mlxtend -y
+RUN conda install jupyter matplotlib seaborn scikit-learn pandas numpy scipy statsmodels tensorflow keras nltk textblob mlxtend xgboost -y
 
 VOLUME ["/notebooks"]
 EXPOSE 8888

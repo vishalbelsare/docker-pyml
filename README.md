@@ -14,6 +14,7 @@ _rueedlinger/pyml_ is a Docker image to get started very quickly with state of t
 - nltk
 - textblob
 - mlxtend
+- xgboost 
 
 To try out some machine learning algorithms have a look at the _Python Machine Learning Snippets_ (https://github.com/rueedlinger/machine-learning-snippets) - an ongoing project with collection of various machine learning examples as Jupyter Notebooks 
 with scikit-learn, statsmodel, numpy and other libraries.
