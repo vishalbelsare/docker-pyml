@@ -1,6 +1,10 @@
-FROM continuumio/anaconda3:4.4.0
+FROM continuumio/miniconda3:4.4.10
 
 ENV PATH="/opt/conda/bin:${PATH}"
+
+RUN conda update -n base conda -y
+
+RUN conda install python=3.6 -y
 
 RUN conda config --add channels conda-forge
 
