@@ -93,7 +93,8 @@ or another executable (bash, etc.) which is available in the image.
 
 | Version|Description|
 | --- |---|
-| 0.5| latest version|
+| 0.6| latest version|
+| ~~0.5~~| removed from dockerhub|
 | ~~0.4~~| removed from dockerhub|
 | ~~0.3~~| removed from dockerhub|
 | ~~0.2~~| removed from dockerhub|
