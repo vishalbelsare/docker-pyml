@@ -2,16 +2,19 @@ FROM continuumio/miniconda3:4.4.10
 
 ENV PATH="/opt/conda/bin:${PATH}"
 
-RUN conda update -n base conda -y
+# https://github.com/ContinuumIO/docker-images/issues/79
+RUN conda update conda base -y
 
 RUN conda install python=3.6 -y
 
-RUN conda config --add channels conda-forge
+RUN conda config --add channels conda-forge 
 
-RUN conda install jupyter matplotlib seaborn scikit-learn pandas numpy scipy statsmodels tensorflow keras nltk textblob mlxtend xgboost -y
+RUN conda install jupyter jupyterlab matplotlib seaborn pandas numpy scipy scikit-learn statsmodels nltk textblob xgboost tensorflow keras -y
+
 
 VOLUME ["/notebooks"]
 EXPOSE 8888
 
-ENTRYPOINT jupyter notebook --notebook-dir=/notebooks --ip='*' --port=8888 --no-browser --allow-root
+COPY ./docker-entrypoint.sh /
 
+ENTRYPOINT ["/docker-entrypoint.sh"]

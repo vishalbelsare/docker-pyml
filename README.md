@@ -1,7 +1,7 @@
 # pyml - Docker Python Machine Learning Image
-_rueedlinger/pyml_ is a Docker image to get started very quickly with state of the art Python machine learning and data visualization libraries. This image is based on the _continuumio/miniconda3_ Docker image and uses Python 3.6 with packages from conda-forge.
+_rueedlinger/pyml_ is a Docker image to get started very quickly with state of the art Python __data wrangling__, __statistics__ __machine learning__ and __data visualization__ libraries. This image is based on the _continuumio/miniconda3_ Docker image and uses Python 3.6 with packages from conda-forge.
 
-When you start the image a Jupyter notebook with the following preinstalled Python libraries is started:
+The following preinstalled Python libraries and [Jupyter](http://jupyter.org/) are packaged together as a Docker image: 
 
 - [matplotlib](https://matplotlib.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -14,15 +14,19 @@ When you start the image a Jupyter notebook with the following preinstalled Pyth
 - [tensorflow](https://www.tensorflow.org/)
 - [nltk](http://www.nltk.org/)
 - [textblob](https://textblob.readthedocs.io)
-- [mlxtend](http://rasbt.github.io/mlxtend/)
 - [xgboost](https://xgboost.readthedocs.io/) 
     
 
 ## Get started
 
-To get started with __pyml__ - (Python Machine Learning Docker Image) you can just start the Docker image with the following command.  
+To get started with __pyml__ - (Python Machine Learning Docker Image) you can just start the Docker image with the following command.
+This will start a Juypter notebook session.
 
     docker run -p 8888:8888 -it rueedlinger/pyml
+
+ To use JuypterLab instead of a Juypter notebook you can use following command.
+
+    docker run -p 8888:8888 -it rueedlinger/pyml juypterlab
 
 Next you shoud see the following output in the command line.
 
@@ -64,14 +68,37 @@ or use the _latest_ tag.
 
      docker run -it rueedlinger/pyml:latest
     
-You can also run a specific version of an image like _0.4_
+You can also run a specific version of an image like _0.5_
 
-    docker run -it rueedlinger/pyml:0.4
+    docker run -it rueedlinger/pyml:0.5
+
+### Start other applications like IPython, Python or Bash
+
+You can start IPython,
+
+    docker run -it rueedlinger/pyml ipython
+    
+start a Python program (hint mount /notebooks to your local computer),
+
+     docker run -it rueedlinger/pyml python /notebooks/run.py
+     
+or another executable (bash, etc.) which is available in the image.
+
+     docker run -it rueedlinger/pyml bash
 
 ### Versions
+
+#### Docker Images
+> see https://hub.docker.com/r/rueedlinger/pyml/tags/
+
 | Version|Description|
 | --- |---|
-| 0.4| latest version|
-| 0.3| available from dockerhub|
+| 0.5| latest version|
+| ~~0.4~~| removed from dockerhub|
+| ~~0.3~~| removed from dockerhub|
 | ~~0.2~~| removed from dockerhub|
 | ~~0.1~~| removed from dockerhub|
+
+#### Python Packages
+> $ pipe freeze
+
