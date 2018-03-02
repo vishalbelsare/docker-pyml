@@ -68,9 +68,9 @@ or use the _latest_ tag.
 
      docker run -it rueedlinger/pyml:latest
     
-You can also run a specific version of an image like _0.5_
+You can also run a specific version of an image like _0.6_
 
-    docker run -it rueedlinger/pyml:0.5
+    docker run -it rueedlinger/pyml:0.6
 
 ### Start other applications like IPython, Python or Bash
 
